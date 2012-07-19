@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Arkin Level Editor</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jcanvas.js"></script>
+
+	<script type="text/javascript" src="bin/editor.js"></script>
+</head>
+<body>
+	
+	<header>
+		<h1><em>Arkin</em> Editor</h1>
+		<nav>
+			<ul>
+				<li><a id="jsonify" href="#">jsonify</a></li>
+				<li><a href="#usage">usage</a></li>
+				<li><a href="#about">about</a></li>
+			</ul>
+		</nav>
+		<div style="clear: both"></div>
+	</header>
+	
+	<div id="editor">
+	
+		<div id="ui">
+
+			<table id="ui-nodes">
+				<tr>
+					<td colspan="2">position</td>
+					<td>stroke</td>
+					<td>fill</td>
+					<td>start</td>
+					<td>end</td>
+					<td>erase</td>
+				</tr>
+				<!--
+				<tr class="ui-node">
+					<td><input class="x" placeholder="x" style="width: 40px" value="512"/></td>
+					<td><input class="y" placeholder="y" style="width: 40px" value="512"/></td>
+					<td><input class="stroke" placeholder="000000" style="width: 80px" /></td>
+					<td><input class="fill" placeholder="undefined" style="width: 80px" /></td>
+					<td><input name="starting" type="radio" /></td>
+					<td><input name="ending" type="radio" /></td>
+					<td><button class="ui-remove">X</button></td>
+				</tr>
+				-->
+				<tr>
+					<td colspan="7">
+						<button id="ui-add-node">add node</button>
+					</td>
+				</tr>
+			</table>
+		
+			<table id="ui-obstacles">
+				<tr>
+					<td colspan="2">point A</td>
+					<td colspan="2">point B</td>
+					<td>erase</td>
+				</tr>
+				<!--
+				<tr class="ui-obstacle">
+					<td><input class="ax" placeholder="x" value="256"/></td>
+					<td><input class="ay" placeholder="y" value="512"/></td>
+					<td><input class="bx" placeholder="x" value="768"/></td>
+					<td><input class="by" placeholder="y" value="512"/></td>
+					<td><button class="ui-remove">X</button></td>
+				</tr>
+				-->
+				<tr>
+					<td colspan="5">
+						<button id="ui-add-obstacle">add obstacle</button>
+					</td>
+				</tr>
+			</table>
+		
+		</div>
+
+		<div id="preview">
+			<canvas id="paper" width="512" height="512"></canvas>
+		</div>
+	
+	</div>
+
+	<footer>
+		<p>Łukasz Hanuszczak 2012</p>
+	</footer>
+	
+</body>
+</html>
